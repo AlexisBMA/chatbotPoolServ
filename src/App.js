@@ -1,3 +1,4 @@
+import 'react-chatbot-kit/build/main.css';
 import React from 'react';
 import Chatbot from 'react-chatbot-kit'
 import './App.css';
