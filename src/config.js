@@ -1,10 +1,10 @@
 // Config starter code
 import { createChatBotMessage } from 'react-chatbot-kit';
 
-const botName = 'ExcitementBot';
+const botName = '';
 
 const config = {
-  initialMessages: [createChatBotMessage(`Hi! I'm ${botName}`)],
+  initialMessages: [createChatBotMessage(`¡Hola! Soy tu asistente inteligente de Albercas Cleaner ¿qué puedo hacer por ti? ${botName}`)],
   botName: botName,
   customStyles: {
     botMessageBox: {
