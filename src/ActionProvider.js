@@ -19,6 +19,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+
   const handleMetodosPago = () => {
     const botMessage = createChatBotMessage('Aceptamos pagos en efectivo, PayPal y tarjetas de crédito Visa y MasterCard');
 
@@ -93,6 +94,19 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const handleAppBtn = () => {
+    const botMessage = createChatBotMessage(
+      "Puedes crear, consultar, modificar o cancelar tus citas",
+      // {
+      //   widget: "Agregar widget de citas",
+      // }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
 
 
   return (
@@ -102,7 +116,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleLocation, handleWrokingDays, handleContacto, handleMetodosPago,
             handleProductos, handleServicios, handleAgeCitas, handleConCitas,
-            handleCanCitas, handleModCitas
+            handleCanCitas, handleModCitas, handleAppBtn
           },
         });
       })}
