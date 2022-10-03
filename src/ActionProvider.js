@@ -107,6 +107,32 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
 
+  const handleServBtn = () => {
+    const botMessage = createChatBotMessage(
+      "Puedes consultar los servicios en la sección de servicios",
+      // {
+      //   widget: "Agregar widget de servicios",
+      // }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
+  const handleProdBtn = () => {
+    const botMessage = createChatBotMessage(
+      "Puedes consultar los productos en la sección de servicios",
+      // {
+      //   widget: "Agregar widget de servicios",
+      // }
+    );
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+
 
 
   return (
@@ -116,7 +142,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleLocation, handleWrokingDays, handleContacto, handleMetodosPago,
             handleProductos, handleServicios, handleAgeCitas, handleConCitas,
-            handleCanCitas, handleModCitas, handleAppBtn
+            handleCanCitas, handleModCitas, handleAppBtn, handleServBtn, handleProdBtn
           },
         });
       })}

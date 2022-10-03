@@ -9,8 +9,8 @@ const Options = (props) => {
       handler: props.actionProvider.handleAppBtn,
       id: 1,
     },
-    { text: "Servicios", handler: () => {}, id: 2 },
-    { text: "Productos", handler: () => {}, id: 3 },
+    { text: "Servicios", handler: props.actionProvider.handleServBtn , id: 2 },
+    { text: "Productos", handler: props.actionProvider.handleProdBtn, id: 3 },
   ];
 
   const buttonsMarkup = options.map((option) => (
